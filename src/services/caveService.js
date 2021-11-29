@@ -1,5 +1,5 @@
-const baseUrl = 'http://localhost:3030/data'
-//'http://softuni-custom-server.herokuapp.com/jsonstore'
+const baseUrl = 'https://softuni-service.herokuapp.com/data'
+
 export const getAll = async () => {
     const response = await fetch(`${baseUrl}/pets`)
 
