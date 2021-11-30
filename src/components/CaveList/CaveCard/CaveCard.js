@@ -3,7 +3,7 @@ const CaveCard = ({cave}) => {
     return (
         <li className="item">
             <h3>Name: {cave.name}</h3>
-            <p>Type: {cave.type}</p>
+            <p>Location: {cave.location}</p>
             <p className="img"><img src={cave.imageUrl} /></p>
             <Link className="button" to={`/details/${cave._id}`}>Details</Link>
         </li>
