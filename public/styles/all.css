@@ -1,0 +1,9 @@
+body{
+    background-color:rgb(231, 230, 230);
+}
+#site-footer{
+   padding: 2px;
+   background-color:rgb(99, 98, 98) ;
+   color: white;
+   text-align: center;
+  }

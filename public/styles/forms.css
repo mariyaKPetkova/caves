@@ -1,0 +1,40 @@
+.login {
+    text-align: center;
+}
+.login .button-submit {
+    text-decoration-line: none;
+    padding: 10px;
+    color: white;
+    background-color: rgb(99, 98, 98);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .login .button-submit:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .register {
+    text-align: center;
+}
+.register .button-submit {
+    text-decoration-line: none;
+    padding: 10px;
+    color: white;
+    background-color: rgb(99, 98, 98);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .register .button-submit:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+
+form label {
+	font-weight: bold;
+}

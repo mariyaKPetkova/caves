@@ -1,0 +1,39 @@
+#catalog h1{
+    text-align: center;
+    margin: 5px;
+  padding: 10px;
+}
+
+.catalog section ul{
+    flex-direction:column;
+    display: flex;
+}
+.catalog section ul li{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+}
+.catalog section ul li .button {
+    text-decoration-line: none;
+    padding: 15px;
+    color: white;
+    background-color: rgb(99, 98, 98);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .catalog section ul li .button:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .catalog section ul li img{
+      width: 100px;
+  }
+  .catalog section p {
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+  }

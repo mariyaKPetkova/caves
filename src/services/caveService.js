@@ -1,8 +1,9 @@
-const baseUrl = 'http://localhost:5000'
+const baseUrl = ' http://localhost:3030/'
+//'http://localhost:5000' //  /catalog
 //'https://softuni-service.herokuapp.com/data'
 
 export const getAll = async () => {
-    const response = await fetch(`${baseUrl}/data/catalog`)
+    const response = await fetch(`${baseUrl}/data`) //  /catalog
     //console.log(response)
     const caves = await response.json();
 
@@ -12,7 +13,7 @@ export const getAll = async () => {
     return result;
 };
 export const getOne = async (id) => {
-    const response = await fetch(`${baseUrl}/data/catalog/${id}`)
+    const response = await fetch(`${baseUrl}/data/${id}`)//  /catalog
     const caves = await response.json();
     return caves
 }

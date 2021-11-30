@@ -6,26 +6,26 @@ const Register = () => {
                     <legend>Register Form</legend>
                     <p className="field">
                         <label htmlF
-                        or="email">Email</label>
+                        or="email">Email: </label>
                         <span className="input">
                             <input type="text" name="email" id="email" placeholder="Email"/>
                         </span>
                     </p>
                     <p className="field">
                         <label htmlF
-                        or="password">Password</label>
+                        or="password">Password: </label>
                         <span className="input">
                             <input type="password" name="password" id="password" placeholder="Password"/>
                         </span>
                     </p>
                     <p className="field">
                         <label htmlF
-                        or="repeat-pass">Repeat Password</label>
+                        or="repeat-pass">Repeat Password: </label>
                         <span className="input">
                             <input type="password" name="confirm-pass" id="repeat-pass" placeholder="Repeat Password"/>
                         </span>
                     </p>
-                    <input className="button submit" type="submit" value="Register"/>
+                    <input className="button-submit" type="submit" value="Register"/>
                 </fieldset>
             </form>
         </section>
