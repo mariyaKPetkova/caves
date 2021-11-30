@@ -1,7 +1,12 @@
-.login {
+form legend{
+    text-align: center;
+    margin: 5px;
+  padding: 10px;
+}
+  form {
     text-align: center;
 }
-.login .button-submit {
+form .button-submit {
     text-decoration-line: none;
     padding: 10px;
     color: white;
@@ -11,25 +16,7 @@
     border-radius: 5px;
     font-size: 15px;
   }
-  .login .button-submit:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .register {
-    text-align: center;
-}
-.register .button-submit {
-    text-decoration-line: none;
-    padding: 10px;
-    color: white;
-    background-color: rgb(99, 98, 98);
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 15px;
-  }
-  .register .button-submit:hover {
+  form .button-submit:hover {
     background-color: #ddd;
     color: black;
   }
