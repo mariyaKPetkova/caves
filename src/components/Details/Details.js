@@ -1,14 +1,23 @@
+import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import * as caveService from '../../services/caveService.js'
 const Details = () => {
+    const navigate = useNavigate()
     const [cave, setCave] = useState({})
     const { caveId } = useParams()
     useEffect(async () => {
         const result = await caveService.getOne(caveId)
-        
         setCave(result)
-    },[])
+    }, [])
+
+    const onDelete = (e) => {
+        e.preventDefault()
+        caveService.del(caveId)
+        .then(()=>{
+            navigate('/')
+        })
+    }
 
     return (
         <section id="details-page" className="details">
@@ -18,7 +27,7 @@ const Details = () => {
                 <p className="img"><img src={cave.imageUrl} /></p>
                 <div className="actions">
                     <a className="button" href="#">Edit</a>
-                    <a className="button" href="#">Delete</a>
+                    <a className="button" href="#" onClick={onDelete}>Delete</a>
 
                     <a className="button" href="#">Like</a>
 

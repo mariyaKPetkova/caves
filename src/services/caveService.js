@@ -32,3 +32,13 @@ export const getOne = async (id) => {
     
     return caves
 }
+export const del = (id,token)=>{
+    return fetch(`${baseUrl}/data/catalog/${id}`,{
+        method:'Delete',
+        //headers:{'X-Authorization': token}
+    })
+    // .then(res=> {
+    //     console.log(res)
+    //     res.json()
+    // })
+}

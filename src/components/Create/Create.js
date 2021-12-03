@@ -9,7 +9,7 @@ const Create = () => {
         const location = form.get('location')
         const description = form.get('description')
         const imageUrl = form.get('imageUrl')
-        console.log(name)
+        
         caveService.create({
             name,
             location,
