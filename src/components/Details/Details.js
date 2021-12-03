@@ -23,7 +23,7 @@ const Details = () => {
                     <a className="button" href="#">Like</a>
 
                     <div className="likes">
-                        <img className="hearts" src="/images/heart.png" />
+                        <img className="hearts" src="" />
                         <span id="total-likes">Likes: </span>
                     </div>
 

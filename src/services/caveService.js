@@ -26,7 +26,9 @@ export const create = async (data,token) => {
     return caves
 }
 export const getOne = async (id) => {
+    //console.log(id);
     const response = await fetch(`${baseUrl}/data/catalog/${id}`)//  
     const caves = await response.json();
+    
     return caves
 }
