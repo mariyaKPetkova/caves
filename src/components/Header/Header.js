@@ -11,7 +11,7 @@ const Header = () => {
                     </div>
                     <div id="user">
                         <a className="button" href="/my-visits">My Visits</a>
-                        <a className="button" href="/create">Add Pet</a>
+                        <a className="button" href="/create">Add Cave</a>
                         <a className="button" href="#">Logout</a>
                         <span>Welcome, email</span>
                     </div>

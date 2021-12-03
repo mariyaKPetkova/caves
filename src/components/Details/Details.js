@@ -6,6 +6,7 @@ const Details = () => {
     const { caveId } = useParams()
     useEffect(async () => {
         const result = await caveService.getOne(caveId)
+        
         setCave(result)
     },[])
 
