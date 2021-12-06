@@ -18,7 +18,7 @@ export const create = async (data,token) => {
         method:'Post',
         headers:{
             'content-type':'application/json',
-            //'X-Authorization': token
+            'X-Authorization': token
         },
         body: JSON.stringify(data)
     }) 

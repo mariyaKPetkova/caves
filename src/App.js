@@ -8,16 +8,27 @@ import Edit from './components/Edit/Edit.js'
 import Login from './components/Login/Login.js'
 import MyVisits from './components/MyVisits/MyVisits.js'
 import Register from './components/Register/Register.js'
+import {AuthContext} from './contexts/AuthContext.js'
+import { useState } from 'react';
 
 function App() {
+  const [user,setUser]= useState({
+    _id:'',
+    email:'',
+    accessToken:''
+  })
+  const login = (data) =>{
+    setUser(data)
+  }
   return (
+    <AuthContext.Provider value={{user,login}}>
     <div id="container">
-      <Header />
+      <Header/>
       <main id="site-content">
         <Routes>
           <Route path="/" element={<Dashboard/>} />
           <Route path="/edit" element={<Edit/>} />
-          <Route path="/login" element={<Login/>} />
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register/>} />
           <Route path="/my-visits" element={<MyVisits/>} />
           <Route path="/create" element={<Create/>} />
@@ -31,6 +42,7 @@ function App() {
       </footer>
 
     </div>
+    </AuthContext.Provider>
   );
 }
 

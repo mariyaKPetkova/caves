@@ -1,10 +1,14 @@
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as caveService from '../../services/caveService.js'
+import { AuthContext } from '../../contexts/AuthContext.js'
 const Create = () => {
      const navigate = useNavigate()
+    const {user} = useContext(AuthContext)
     const onCreate = (e)=>{
         e.preventDefault()
         const form = new FormData(e.currentTarget)
+
         const name = form.get('name')
         const location = form.get('location')
         const description = form.get('description')
@@ -15,7 +19,7 @@ const Create = () => {
             location,
             description,
             imageUrl
-        })
+        },user.accessToken)
         .then(result=>{
             navigate('/')
         })
