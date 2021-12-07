@@ -1,22 +1,32 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { useContext } from 'react'
 import * as caveService from '../../services/caveService.js'
+import { AuthContext } from '../../contexts/AuthContext.js'
 const Details = () => {
+    const { user } = useContext(AuthContext)
     const navigate = useNavigate()
     const [cave, setCave] = useState({})
     const { caveId } = useParams()
-    useEffect(async () => {
-        const result = await caveService.getOne(caveId)
-        setCave(result)
-    }, [])
+
+    // useEffect(async () => { //
+    //     const result = await caveService.getOne(caveId)
+    //     setCave(result)
+    // }, [])
+    useEffect(() => { //
+        caveService.getOne(caveId)
+        .then(result=>{
+            setCave(result)
+        })
+    }, [caveId])
 
     const onDelete = (e) => {
         e.preventDefault()
-        caveService.del(caveId)
-        .then(()=>{
-            navigate('/')
-        })
+        caveService.del(caveId,user.accessToken)
+            .then(() => {
+                navigate('/')
+            })
     }
 
     return (
@@ -26,10 +36,14 @@ const Details = () => {
                 <p className="type">Location: {cave.location}</p>
                 <p className="img"><img src={cave.imageUrl} /></p>
                 <div className="actions">
-                    <a className="button" href="#">Edit</a>
-                    <a className="button" href="#" onClick={onDelete}>Delete</a>
+                    {user._id && (user._id == cave.owner
+                        ? (<><a className="button" href="#">Edit</a>
+                            <a className="button" href="#" onClick={onDelete}>Delete</a>
+                        </>)
+                        : (<a className="button" href="#">Like</a>)
+                        )}
 
-                    <a className="button" href="#">Like</a>
+
 
                     <div className="likes">
                         <img className="hearts" src="" />

@@ -11,7 +11,7 @@ const Header = () => {
                     ?(<div id="user">
                         <a className="button" href="/my-visits">My Visits</a>
                         <a className="button" href="/create">Add Cave</a>
-                        <a className="button" href="#">Logout</a>
+                        <a className="button" href="/logout">Logout</a>
                         <span>Welcome, {user.email}</span>
                     </div>)
                     :(<div id="guest">

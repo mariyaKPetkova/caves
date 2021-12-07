@@ -34,11 +34,11 @@ export const getOne = async (id) => {
 }
 export const del = (id,token)=>{
     return fetch(`${baseUrl}/data/catalog/${id}`,{
-        method:'Delete',
-        //headers:{'X-Authorization': token}
+        method:'DELETE',
+        headers:{'X-Authorization': token}
     })
-    // .then(res=> {
-    //     console.log(res)
-    //     res.json()
-    // })
+    .then(res=> {
+        //console.log(res)
+        res.json()
+    })
 }
