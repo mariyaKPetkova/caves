@@ -26,6 +26,20 @@ export const create = async (data,token) => {
     const caves = await response.json();
     return caves
 }
+export const update = async (data,token,id) => {
+    //console.log(id)
+    const response = await fetch(`${baseUrl}/data/catalog/${id}`,
+    {
+        method:'PUT',
+        headers:{
+            'content-type':'application/json',
+            'X-Authorization': token
+        },
+        body: JSON.stringify(data)
+    }) 
+    const caves = await response.json();
+    return caves
+}
 export const getOne = async (id) => {
     //console.log(id);
     const response = await fetch(`${baseUrl}/data/catalog/${id}`)//  

@@ -37,7 +37,8 @@ const Details = () => {
                 <p className="img"><img src={cave.imageUrl} /></p>
                 <div className="actions">
                     {user._id && (user._id == cave.author
-                        ? (<><a className="button" href="#">Edit</a>
+                        ? (<>
+                        <a className="button" href='/edit'>Edit</a>
                             <a className="button" href="#" onClick={onDelete}>Delete</a>
                         </>)
                         : (<a className="button" href="#">Like</a>)
