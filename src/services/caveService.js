@@ -13,9 +13,10 @@ export const getAll = async () => {
     return result;
 };
 export const create = async (data,token) => {
+    
     const response = await fetch(`${baseUrl}/data/catalog`,
     {
-        method:'Post',
+        method:'POST',
         headers:{
             'content-type':'application/json',
             'X-Authorization': token

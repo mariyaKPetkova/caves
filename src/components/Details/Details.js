@@ -36,7 +36,7 @@ const Details = () => {
                 <p className="type">Location: {cave.location}</p>
                 <p className="img"><img src={cave.imageUrl} /></p>
                 <div className="actions">
-                    {user._id && (user._id == cave.owner
+                    {user._id && (user._id == cave.author
                         ? (<><a className="button" href="#">Edit</a>
                             <a className="button" href="#" onClick={onDelete}>Delete</a>
                         </>)
