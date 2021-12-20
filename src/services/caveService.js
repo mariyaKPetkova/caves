@@ -57,3 +57,14 @@ export const del = (id,token)=>{
         res.json()
     })
 }
+export const like = (caveId, cave ,token)=>{
+    return fetch(`${baseUrl}/data/catalog/${caveId}`,{
+        method:'PUT',
+        headers: {
+            'content-type': 'application/json',
+            'X-Authorization': token
+        },
+        body:JSON.stringify(cave)
+    })
+    .then(res=>res.json())
+}

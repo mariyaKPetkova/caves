@@ -28,7 +28,24 @@ const Details = () => {
                 navigate('/')
             })
     }
+    const onLike = (e) => {
+        e.preventDefault()
 
+        // if(cave.likes.includes(user._id)){
+        //     return
+        // }
+        const likes = [...cave.likes,user._id]
+        const upLikes = {...cave,likes}
+        caveService.like(caveId,upLikes,user.accessToken)
+        .then(data => {
+            console.log(data);
+            setCave(state =>({
+                ...state,
+                upLikes
+            }))
+            navigate('/')
+        })
+    }
     return (
         <section id="details-page" className="details">
             <div className="cave-information">
@@ -41,14 +58,14 @@ const Details = () => {
                         <a className="button" href='/edit'>Edit</a>
                             <a className="button" href="#" onClick={onDelete}>Delete</a>
                         </>)
-                        : (<a className="button" href="#">Like</a>)
+                        : (<a className="button" href="#" onClick={onLike}>Like</a>)
                         )}
 
 
 
                     <div className="likes">
                         <img className="hearts" src="" />
-                        <span id="total-likes">Likes: </span>
+                        <span id="total-likes">Likes: {cave.likes}</span>
                     </div>
 
                 </div>
