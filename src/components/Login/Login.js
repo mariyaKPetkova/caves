@@ -1,11 +1,10 @@
 import { useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
 import * as authService from '../../services/authService.js'
-import { AuthContext } from '../../contexts/AuthContext.js'
+import { useAuthContext } from '../../contexts/AuthContext.js'
 
 const Login = () => {
     const navigate = useNavigate()
-    const {login} = useContext(AuthContext)
+    const {login} = useAuthContext()
 
     const onLogin = (e) =>{
         e.preventDefault()

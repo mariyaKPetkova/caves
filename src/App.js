@@ -1,6 +1,6 @@
 import { Routes,Route} from 'react-router-dom'
-import { useState } from 'react';
 
+import { AuthProvider } from './contexts/AuthContext.js';
 import Header from './components/Header/Header.js';
 import Create from './components/Create/Create.js'
 import Dashboard from './components/Dashboard/Dashboard.js'
@@ -10,25 +10,13 @@ import Login from './components/Login/Login.js'
 import Logout from './components/Logout/Logout.js'
 import MyVisits from './components/MyVisits/MyVisits.js'
 import Register from './components/Register/Register.js'
-import {AuthContext} from './contexts/AuthContext.js'
-import useLocalStorage from '../src/hooks/useLocalStorage.js'
 
-const initUserState = {
-  _id:'',
-  email:'',
-  accessToken:''
-}
+
+
 function App() {
-  const [user,setUser]= useLocalStorage('user',initUserState)
   
-  const login = (data) =>{
-    setUser(data)
-  }
-  const logout = ()=>{
-    setUser(initUserState)
-  }
   return (
-    <AuthContext.Provider value={{user,login,logout}}>
+    <AuthProvider>
     <div id="container">
       <Header/>
       <main id="site-content">
@@ -50,7 +38,7 @@ function App() {
       </footer>
 
     </div>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
 

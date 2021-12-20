@@ -1,10 +1,11 @@
-import { useContext } from 'react'
+
 import { useNavigate } from 'react-router-dom'
 import * as caveService from '../../services/caveService.js'
-import { AuthContext } from '../../contexts/AuthContext.js'
+import { useAuthContext } from '../../contexts/AuthContext.js'
+
 const Create = () => {
      const navigate = useNavigate()
-    const {user} = useContext(AuthContext)
+    const {user} = useAuthContext()
     const onCreate = (e)=>{
         e.preventDefault()
         const form = new FormData(e.currentTarget)

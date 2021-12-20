@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useContext } from 'react'
+
 import * as caveService from '../../services/caveService.js'
-import { AuthContext } from '../../contexts/AuthContext.js'
+import { useAuthContext } from '../../contexts/AuthContext.js'
 const Details = () => {
-    const { user } = useContext(AuthContext)
+    const { user } = useAuthContext()
     const navigate = useNavigate()
     const [cave, setCave] = useState({})
     const { caveId } = useParams()
