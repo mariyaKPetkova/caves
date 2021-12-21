@@ -16,9 +16,7 @@ const CaveList = () => {
                 {caves.map(x => <CaveCard key={x._id} cave={x} />)}
             </ul>
         :<p className="no-item">No items in database!</p>
-        }
-            
-            
+        } 
         </>
     )
 }
