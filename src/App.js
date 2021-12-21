@@ -22,7 +22,7 @@ function App() {
       <main id="site-content">
         <Routes>
           <Route path="/" element={<Dashboard/>} />
-          <Route path="/edit" element={<Edit/>} />
+          <Route path="/edit/:caveId" element={<Edit/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<Register/>} />
