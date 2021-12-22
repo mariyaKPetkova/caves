@@ -1,0 +1,38 @@
+#details-page{
+    margin: 10px 20px ;
+    padding: 10px 20px ;
+      flex-direction:row;
+      display: flex;
+  }
+#info-cave{
+text-align: left;
+   padding: 10px;
+   margin : 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+}
+ .button {
+    text-decoration-line: none;
+    padding: 15px;
+    color: white;
+    background-color: rgb(99, 98, 98);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .button:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  #details-img{
+    padding: 10px;
+   margin : 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 500px;
+  }
+  .act{
+    margin: 10px 20px ;
+  padding: 10px 20px ;
+  }

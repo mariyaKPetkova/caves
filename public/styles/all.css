@@ -2,7 +2,8 @@ body{
     background-color:rgb(231, 230, 230);
 }
 #site-footer{
-   padding: 2px;
+   padding: 2px 5px 2px 5px;
+   margin: 200px 5px 2px 5px;
    background-color:rgb(99, 98, 98) ;
    color: white;
    text-align: center;

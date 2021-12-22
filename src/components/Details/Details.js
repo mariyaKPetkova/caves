@@ -48,11 +48,16 @@ const Details = () => {
     }
     return (
         <section id="details-page" className="details">
-            <div className="cave-information">
-                <h3>Name: {cave.name}</h3>
+            <div id="imgg">
+            <img id="details-img" src={cave.imageUrl} />
+            </div>
+            <div id="info-cave">
+            <h3>Name: {cave.name}</h3>
                 <p>Location: {cave.location}</p>
-                <img src={cave.imageUrl} />
-                <div className="actions">
+                <h3>Description:</h3>
+                <p>{cave.description}</p>
+                <h5>Likes: {cave.likes}</h5>
+                <div className="act">
                     {user._id && (user._id == cave.author
                         ? (<>
                         <a className="button" href={`/edit/${caveId}`}>Edit</a>
@@ -60,16 +65,8 @@ const Details = () => {
                         </>)
                         : (<a className="button" href="#" onClick={onLike}>Like</a>)
                         )}
-                    <div className="likes">
-                        <span id="total-likes">Likes: {cave.likes}</span>
-                    </div>
-
                 </div>
-            </div>
-            <div className="cave-description">
-                <h3>Description:</h3>
-                <p>{cave.description}</p>
-            </div>
+                </div>               
         </section>
     )
 }
