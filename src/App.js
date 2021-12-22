@@ -33,8 +33,8 @@ function App() {
 
       </main>
 
-      <footer id="site-footer">
-        <p>My App</p>
+      <footer>
+        <p>Caves</p>
       </footer>
 
     </div>
