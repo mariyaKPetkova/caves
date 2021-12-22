@@ -81,36 +81,32 @@ const Edit = () => {
                 <fieldset>
                     <legend>Edit my Cave</legend>
                     <p className="field">
-                        <label htmlF
-                            or="name">Name: </label>
-                        <span className="input">
+                        <label>Name: </label>
+                        <p className="field">
                             <input type="text" name="name" id="name" defaultValue={cave.name} onChange={onName}/>
-                        </span>
+                            </p>
                         <span style={{display: errors.name?'inline':'hidden'}}>{errors.name}</span>
                     </p>
                     <p className="field">
-                        <label htmlF
-                            or="location">Location: </label>
-                        <span className="input">
+                        <label>Location: </label>
+                        <p className="field">
                             <input type="text" name="location" id="location" defaultValue={cave.location} onChange={onLocation} />
-                        </span>
+                       </p>
                         <span style={{display: errors.location?'inline':'hidden'}}>{errors.location}</span>
                     </p>
                     <p className="field">
-                        <label htmlF
-                            or="description">Description: </label>
-                        <span className="input">
+                        <label >Description: </label>
+                        <p className="field">
                             <textarea name="description"
                                 id="description" defaultValue={cave.description} onChange={onDescription}/>
-                        </span>
+                       </p>
                         <span style={{display: errors.description?'inline':'hidden'}}>{errors.description}</span>
                     </p>
                     <p className="field">
-                        <label htmlF
-                            or="image">Image: </label>
-                        <span className="input">
+                        <label >Image: </label>
+                        <p className="field">
                             <input type="text" name="imageUrl" id="image" defaultValue={cave.imageUrl} onChange={onImageUrl}/>
-                        </span>
+                       </p>
                         <span style={{display: errors.imageUrl?'inline':'hidden'}}>{errors.imageUrl}</span>
                     </p>
 

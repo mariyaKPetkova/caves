@@ -32,18 +32,14 @@ const Login = () => {
                     <legend>Login Form</legend>
                     <span style={{display: errors.message?'inline':'hidden'}}>{errors.message}</span>
                     <p className="field">
-                        <label htmlF
-                        or="email">Email: </label>
-                        <span className="input">
+                        <label>Email:</label>
+                        <p className="field"></p>
                             <input type="text" name="email" id="email"/>
-                        </span>
                     </p>
                     <p className="field">
-                        <label htmlF
-                        or="password">Password: </label>
-                        <span className="input">
+                        <label>Password:</label>
+                        <p className="field"></p>
                             <input type="password" name="password" id="password"/>
-                        </span>
                     </p>
                     <input className="button-submit" type="submit" value="Login"/>
                 </fieldset>

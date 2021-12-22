@@ -56,29 +56,26 @@ const Register = () => {
                 <fieldset>
                     <legend>Register Form</legend>
                     <p className="field">
-                        <label htmlF
-                        or="email">Email: </label>
-                        <span className="input">
+                        <label >Email: </label>
+                        <p className="field"></p>
                             <input type="text" name="email" id="email" placeholder="Email" onChange={onEmail} />
-                        </span>
+                            <p className="field"></p>
                         <span style={{display: errors.email?'inline':'hidden'}}>{errors.email}</span>
-                    </p>
-                    <p className="field">
-                        <label htmlF
-                        or="password">Password: </label>
-                        <span className="input">
+                        </p>
+                        <p className="field">
+                        <label >Password: </label>
+                        <p className="field"></p>
                             <input type="password" name="password" id="password" placeholder="Password" onChange={onPassword}/>
-                        </span>
+                            <p className="field"></p>
                         <span style={{display: errors.password?'inline':'hidden'}}>{errors.password}</span>
-                    </p>
-                    <p className="field">
-                        <label htmlF
-                        or="repeat-pass">Repeat Password: </label>
-                        <span className="input">
+                        </p>
+                        <p className="field">
+                        <label>Repeat Password: </label>
+                        <p className="field"></p>
                             <input type="password" name="repeatPassword" id="repeat-pass" placeholder="Repeat Password" />
-                        </span>
+                            <p className="field"></p>
                         <span style={{display: errors.repeatPassword?'inline':'hidden'}}>{errors.repeatPassword}</span>
-                    </p>
+                        </p>
                     <input className="button-submit" type="submit" value="Register"/>
                 </fieldset>
             </form>
