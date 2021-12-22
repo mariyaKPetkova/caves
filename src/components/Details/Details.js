@@ -50,8 +50,8 @@ const Details = () => {
         <section id="details-page" className="details">
             <div className="cave-information">
                 <h3>Name: {cave.name}</h3>
-                <p className="type">Location: {cave.location}</p>
-                <p className="img"><img src={cave.imageUrl} /></p>
+                <p>Location: {cave.location}</p>
+                <img src={cave.imageUrl} />
                 <div className="actions">
                     {user._id && (user._id == cave.author
                         ? (<>
@@ -60,11 +60,7 @@ const Details = () => {
                         </>)
                         : (<a className="button" href="#" onClick={onLike}>Like</a>)
                         )}
-
-
-
                     <div className="likes">
-                        <img className="hearts" src="" />
                         <span id="total-likes">Likes: {cave.likes}</span>
                     </div>
 

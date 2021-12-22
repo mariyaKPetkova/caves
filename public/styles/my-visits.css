@@ -1,13 +1,18 @@
-#my-caves-page h1{
+#my-caves-page h2{
     text-align: center;
     margin: 5px;
   padding: 10px;
 }
 .my-caves ul{
-    flex-direction:column;
+  margin: 10px 50px ;
+  padding: 10px 50px ;
+  
+    flex-direction:row;
     display: flex;
 }
 .my-caves li{
+  margin: 10px 20px ;
+  padding: 10px 20px ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     display: flex;
@@ -29,6 +34,6 @@
     color: black;
   }
   .my-caves ul li img{
-    width: 100px;
+    width: 200px;
   }
   

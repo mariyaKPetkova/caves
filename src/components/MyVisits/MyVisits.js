@@ -15,12 +15,15 @@ const MyVisits = () => {
     },[])
     return (
         <>
+        <section id="my-caves-page" className="my-caves">
+        <h2>My Visits</h2>
         {caves.length > 0
         ?<ul className="list">
                 {caves.map(x => <CaveCard key={x._id} cave={x} />)}
             </ul>
         :<h3>No visits!</h3>
         } 
+        </section>
         </>
     )
 }
