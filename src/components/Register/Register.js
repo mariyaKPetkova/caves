@@ -23,32 +23,50 @@ const Register = () => {
             setErrors(state =>({...state, repeatPassword:false}))
         }
 
+        if(password.length < 3 || password.length >20){
+            setErrors(state =>({...state, password:'Password must be at least 3 and  maximum 20 characters long'}))
+            return
+        }else{
+            setErrors(state =>({...state, password:false}))
+        }
+
+        if(email.length < 3 || email.length > 20){
+            setErrors(state =>({...state, email:'Email must be at least 3 and  maximum 20 characters long'}))
+            return
+        }else{
+            setErrors(state =>({...state, email:false}))
+        }
+
         authService.register(email,password)
         .then(authData=>{
             login(authData)
             navigate('/')
         })
     }
-    const onEmail = (e) =>{
-        const curr = e.currentTarget.value
-        if(curr.length < 3){
-            setErrors(state =>({...state, email:'Email must be at least 3 characters long'}))
-        }else if(curr.length > 20){
-            setErrors(state =>({...state, email:'Email must be maximum 20 characters long'}))
-        }else{
-            setErrors(state =>({...state, email:false}))
-        }
-    }
-    const onPassword = (e) =>{
-        const curr = e.currentTarget.value
-        if(curr.length < 3){
-            setErrors(state =>({...state, password:'Password must be at least 3 characters long'}))
-        }else if(curr.length > 20){
-            setErrors(state =>({...state, password:'Password must be maximum 20 characters long'}))
-        }else{
-            setErrors(state =>({...state, password:false}))
-        }
-    }
+    // const onEmail = (e) =>{
+    //     const curr = e.currentTarget.value
+    //     if(curr.length < 3){
+    //         setErrors(state =>({...state, email:'Email must be at least 3 characters long'}))
+    //         return
+    //     }else if(curr.length > 20){
+    //         setErrors(state =>({...state, email:'Email must be maximum 20 characters long'}))
+    //         return
+    //     }else{
+    //         setErrors(state =>({...state, email:false}))
+    //     }
+    // }
+    // const onPassword = (e) =>{
+    //     const curr = e.currentTarget.value
+    //     if(curr.length < 3){
+    //         setErrors(state =>({...state, password:'Password must be at least 3 characters long'}))
+    //         return
+    //     }else if(curr.length > 20){
+    //         setErrors(state =>({...state, password:'Password must be maximum 20 characters long'}))
+    //         return
+    //     }else{
+    //         setErrors(state =>({...state, password:false}))
+    //     }
+    // }
     
     return(
         <section id="register-page" className="register">
@@ -58,14 +76,14 @@ const Register = () => {
                     <p className="field">
                         <label >Email: </label>
                         <p className="field"></p>
-                            <input type="text" name="email" id="email" placeholder="Email" onChange={onEmail} />
+                            <input type="text" name="email" id="email" placeholder="Email" />
                             <p className="field"></p>
                         <span style={{display: errors.email?'inline':'hidden'}}>{errors.email}</span>
                         </p>
                         <p className="field">
                         <label >Password: </label>
                         <p className="field"></p>
-                            <input type="password" name="password" id="password" placeholder="Password" onChange={onPassword}/>
+                            <input type="password" name="password" id="password" placeholder="Password" />
                             <p className="field"></p>
                         <span style={{display: errors.password?'inline':'hidden'}}>{errors.password}</span>
                         </p>
