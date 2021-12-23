@@ -50,8 +50,8 @@ const Create = () => {
         const curr = e.currentTarget.value
         if(curr.length < 3){
             setErrors(state =>({...state, description:'Description must be at least 3 characters long'}))
-        }else if(curr.length > 100){
-            setErrors(state =>({...state, description:'Description must be maximum 100 characters long'}))
+        }else if(curr.length > 150){
+            setErrors(state =>({...state, description:'Description must be maximum 150 characters long'}))
         }else{
             setErrors(state =>({...state, description:false}))
         }
