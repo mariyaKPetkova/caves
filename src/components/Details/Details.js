@@ -9,7 +9,6 @@ const Details = () => {
     const navigate = useNavigate()
     const [cave, setCave] = useState({})
     const { caveId } = useParams()
-
     // useEffect(async () => { //
     //     const result = await caveService.getOne(caveId)
     //     setCave(result)
@@ -28,12 +27,13 @@ const Details = () => {
                 navigate('/')
             })
     }
+    
     const onLike = (e) => {
         e.preventDefault()
 
-        // if(cave.likes.includes(user._id)){
-        //     return
-        // }
+        if(cave.likes.includes(user._id)){
+            return
+        }
         const likes = [...cave.likes,user._id]
         const upLikes = {...cave,likes}
         caveService.like(caveId,upLikes,user.accessToken)
@@ -46,6 +46,7 @@ const Details = () => {
             navigate('/')
         })
     }
+    
     return (
         <section id="details-page" className="details">
             <div id="imgg">
@@ -56,14 +57,15 @@ const Details = () => {
                 <p>Location: {cave.location}</p>
                 <h3>Description:</h3>
                 <p>{cave.description}</p>
-                <h5>Likes: {cave.likes}</h5>
+                <h5>Likes: {cave.countLikes}</h5>
                 <div className="act">
                     {user._id && (user._id == cave.author
                         ? (<>
                         <a className="button" href={`/edit/${caveId}`}>Edit</a>
                             <a className="button" href="#" onClick={onDelete}>Delete</a>
                         </>)
-                        : (<a className="button" href="#" onClick={onLike}>Like</a>)
+                        :(<a className="button" href="#" onClick={onLike}>Like</a>)
+                        
                         )}
                 </div>
                 </div>               
