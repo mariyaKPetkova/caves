@@ -16,6 +16,7 @@ const Details = () => {
     useEffect(() => { //
         caveService.getOne(caveId)
         .then(result=>{
+            result.coutLikes = result.likes.length
             setCave(result)
         })
     }, [caveId])
@@ -57,7 +58,7 @@ const Details = () => {
                 <p>Location: {cave.location}</p>
                 <h3>Description:</h3>
                 <p>{cave.description}</p>
-                <h5>Likes: {cave.likes}</h5>
+                <h5>Likes: {cave.coutLikes}</h5>
                 <div className="act">
                     {user._id && (user._id == cave.author
                         ? (<>
