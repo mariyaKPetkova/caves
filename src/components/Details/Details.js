@@ -57,7 +57,7 @@ const Details = () => {
                 <p>Location: {cave.location}</p>
                 <h3>Description:</h3>
                 <p>{cave.description}</p>
-                <h5>Likes: {cave.countLikes}</h5>
+                <h5>Likes: {cave.likes}</h5>
                 <div className="act">
                     {user._id && (user._id == cave.author
                         ? (<>
