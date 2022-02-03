@@ -8,4 +8,8 @@ footer{
    background-color:rgb(99, 98, 98) ;
    color: white;
    text-align: center;
+   font-size: 18px;
+    letter-spacing: 0.6px;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
   }

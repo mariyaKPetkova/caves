@@ -75,10 +75,12 @@
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     margin: 15px;
+    color: rgb(46, 41, 41);
   }
   .cave-location{
     font-family: Helvetica, sans-serif;
     font-size: 14px;
     margin: 8px;
+    color: rgb(46, 41, 41);
   }
   

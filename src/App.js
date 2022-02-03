@@ -34,7 +34,7 @@ function App() {
       </main>
 
       <footer>
-        <p>Caves</p>
+        <p>&copy; Share Your Favorite Caves</p>
       </footer>
 
     </div>
