@@ -7,6 +7,7 @@ const Header = () => {
             <nav className="navbar">
                 <section className="topnav">
                     <a href="/">Dashboard</a>
+                    <a className="button" href="/news">News</a>
                     {user.email
                     ?(<div id="user">
                         <a className="button" href="/my-visits">My Visits</a>

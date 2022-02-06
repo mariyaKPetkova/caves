@@ -1,0 +1,41 @@
+/*      <section class="details-news">
+            <img id="img-news" src={news.img} />
+            <div id="info-news">
+                <h3>{news.name}</h3>
+                <p>{news.description}</p>
+            </div>
+        </section> */
+
+.details-news{
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+    width: 1200px;
+    height: 600px;
+}
+.details-news img{
+    border-radius: 5px;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    
+}
+#info-news{
+    position: absolute;
+    left: 640px;
+    top: 10px;
+}
+#info-news h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    
+}
+
+#info-news h3, p{
+    padding-right: 15px;
+    text-align: center;
+    line-height: 1.5;
+}

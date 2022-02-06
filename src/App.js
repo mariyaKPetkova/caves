@@ -10,6 +10,8 @@ import Login from './components/Login/Login.js'
 import Logout from './components/Logout/Logout.js'
 import MyVisits from './components/MyVisits/MyVisits.js'
 import Register from './components/Register/Register.js'
+import News from './components/News/News.js';
+import DetailsNews from './components/DetailsNews/DetailsNews.js';
 
 
 
@@ -29,6 +31,8 @@ function App() {
           <Route path="/my-visits" element={<MyVisits/>} />
           <Route path="/create" element={<Create/>} />
           <Route path="/details/:caveId" element={<Details/>} />
+          <Route path="/news" element={<News/>} />
+          <Route path="/detailsNews/:newsId" element={<DetailsNews/>} />
         </Routes>
 
       </main>
