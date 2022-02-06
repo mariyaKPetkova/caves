@@ -1,7 +1,9 @@
-
+.list-news{
+  margin: 50px 150px ;
+}
 .li-news{
     list-style-type: none;
-    margin: 60px;
+    margin: 80px;
     border-radius: 3px;
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
     
