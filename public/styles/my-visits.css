@@ -33,6 +33,7 @@
 .my-caves ul .button:hover {
     background-color: #ddd;
     color: black;
+    transition: 0.3s;
   }
   .my-caves ul li img{
     width: 200px;
