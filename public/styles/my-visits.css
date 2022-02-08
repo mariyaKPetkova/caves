@@ -36,7 +36,8 @@
     transition: 0.3s;
   }
   .my-caves ul li img{
-    width: 200px;
+    
+    width: 250px;
     height: 150px;
     border-radius: 5px;
   }
