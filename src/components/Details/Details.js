@@ -54,12 +54,12 @@ const Details = () => {
             <img id="details-img" src={cave.imageUrl} />
             </div>
             <div id="info-cave">
-            <h3>Name: {cave.name}</h3>
-                <p>Location: {cave.location}</p>
-                <h3>Description:</h3>
+            <h3>{cave.name}</h3>
                 <p>{cave.description}</p>
-                <h5>Likes: {cave.coutLikes}</h5>
-                <div className="act">
+                <br></br>
+                <p><i class="fas fa-map-marker-alt"></i> {cave.location}</p>
+                <p id="likes"><i class="far fa-thumbs-up"></i> {cave.coutLikes}</p>
+                <div id="act">
                     {user._id && (user._id == cave.author
                         ? (<>
                         <a className="button" href={`/edit/${caveId}`}>Edit</a>

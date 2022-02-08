@@ -20,6 +20,7 @@
     text-align: center;
 }
 .my-caves ul .button{
+  margin: 20px;
     text-decoration-line: none;
     padding: 15px;
     color: white;
@@ -35,6 +36,10 @@
   }
   .my-caves ul li img{
     width: 200px;
+    height: 150px;
     border-radius: 5px;
+  }
+  .my-caves ul li p{
+    padding-bottom: 20px;
   }
   

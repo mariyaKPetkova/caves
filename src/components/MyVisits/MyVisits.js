@@ -1,7 +1,8 @@
 import { useEffect,useState } from "react"
 import { useAuthContext } from "../../contexts/AuthContext.js"
 import * as caveService from '../../services/caveService.js'
-import CaveCard from '../CaveList/CaveCard/CaveCard.js'
+import MyVisitCard from "./MyVisitCard/MyVisitCard.js"
+
 
 
 const MyVisits = () => {
@@ -19,7 +20,7 @@ const MyVisits = () => {
         <h2>My Visits</h2>
         {caves.length > 0
         ?<ul className="list">
-                {caves.map(x => <CaveCard key={x._id} cave={x} />)}
+                {caves.map(x => <MyVisitCard key={x._id} cave={x} />)}
             </ul>
         :<h3>No visits!</h3>
         } 
