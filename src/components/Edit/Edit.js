@@ -61,8 +61,8 @@ const Edit = () => {
         const curr = e.currentTarget.value
         if(curr.length < 3){
             setErrors(state =>({...state, description:'Description must be at least 3 characters long'}))
-        }else if(curr.length > 150){
-            setErrors(state =>({...state, description:'Description must be maximum 150 characters long'}))
+        }else if(curr.length > 200){
+            setErrors(state =>({...state, description:'Description must be maximum 200 characters long'}))
         }else{
             setErrors(state =>({...state, description:false}))
         }
@@ -77,38 +77,38 @@ const Edit = () => {
     }
     return (
         <section id="edit-page" className="edit">
-            <form id="edit-form" method="PUT" onSubmit={onEdit}>
+            <form id="edit-form" className='form' method="PUT" onSubmit={onEdit}>
                 <fieldset>
                     <legend>Edit my Cave</legend>
-                    <p className="field">
+                    
                         <label>Name: </label>
-                        <p className="field">
+                        
                             <input type="text" name="name" id="name" defaultValue={cave.name} onChange={onName}/>
-                            </p>
+                            
                         <span style={{display: errors.name?'inline':'hidden'}}>{errors.name}</span>
-                    </p>
-                    <p className="field">
+                    
+                    
                         <label>Location: </label>
-                        <p className="field">
+                        
                             <input type="text" name="location" id="location" defaultValue={cave.location} onChange={onLocation} />
-                       </p>
+                       
                         <span style={{display: errors.location?'inline':'hidden'}}>{errors.location}</span>
-                    </p>
-                    <p className="field">
+                    
+                    
                         <label >Description: </label>
-                        <p className="field">
+                        
                             <textarea name="description"
                                 id="description" defaultValue={cave.description} onChange={onDescription}/>
-                       </p>
+                       
                         <span style={{display: errors.description?'inline':'hidden'}}>{errors.description}</span>
-                    </p>
-                    <p className="field">
+                    
+                    
                         <label >Image: </label>
-                        <p className="field">
+                        
                             <input type="text" name="imageUrl" id="image" defaultValue={cave.imageUrl} onChange={onImageUrl}/>
-                       </p>
+                       
                         <span style={{display: errors.imageUrl?'inline':'hidden'}}>{errors.imageUrl}</span>
-                    </p>
+                    
 
                     <input className="button-submit" type="submit" value="Save" />
                 </fieldset>
