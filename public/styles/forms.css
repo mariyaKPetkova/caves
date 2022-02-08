@@ -4,12 +4,12 @@ form legend{
   padding: 10px ;
   font-weight: bold;
 }
-#create-form fieldset{
+.form fieldset{
   margin: 40px 150px;
   padding: 20px 30px;
   width: 350px;
 }
-#create-form .button-submit {
+.form .button-submit {
     text-decoration-line: none;
     padding: 10px;
     color: white;
@@ -19,29 +19,29 @@ form legend{
     border-radius: 5px;
     font-size: 15px;
     width: 90px;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin:20px 15px;
   }
+  
   form .button-submit:hover {
     background-color: #ddd;
     color: black;
-    
+    transition: 0.3s;
   }
 form span {
   color: red
 }
-#create-form label, #create-form input, #create-form span,#create-form textarea{
+.form label, .form input, .form span,.form textarea{
   display: flex;
   padding: 5px 10px;
   margin: 5px 20px;
 }
- 
-  
-
-#create-form textarea{
+.form textarea{
   width: 250px;
   height: 100px;
 }
-#create-form input{
+.form input{
   width: 250px;
+}
+#login-form .button-submit{
+margin: 40px 25px;
 }

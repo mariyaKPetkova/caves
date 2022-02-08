@@ -66,7 +66,7 @@ const Create = () => {
     }
     return (
         <section id="create-page" className="create">
-            <form id="create-form" onSubmit={onCreate} method="Post">
+            <form id="create-form" className='form' onSubmit={onCreate} method="Post">
                 <fieldset>
                     <legend>Add new Cave</legend>
 
