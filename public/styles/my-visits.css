@@ -7,17 +7,20 @@
   margin: 10px 50px ;
   padding: 10px 50px ;
   
-    flex-direction:row;
-    display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 20px;
+  justify-content: center;
 }
 .my-caves li{
-  margin: 10px 20px ;
-  padding: 10px 20px ;
+  margin: 25px ;
+  /* padding: 10px 20px ; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     display: flex;
     flex-direction:column;
     text-align: center;
+    border-radius: 5px;
 }
 .my-caves ul .button{
   margin: 20px;

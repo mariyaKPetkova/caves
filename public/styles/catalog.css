@@ -45,8 +45,9 @@ color: white;
   display: grid;
   grid-template-columns: repeat(4, 300px);
   gap: 20px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  
   
 }
 .catalog .list-items ul li{
