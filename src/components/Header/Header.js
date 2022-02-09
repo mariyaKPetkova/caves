@@ -6,7 +6,7 @@ const Header = () => {
         <header>
             <nav className="navbar">
                 <section className="topnav">
-                    <a href="/">Dashboard</a>
+                    <a href="/">Home</a>
                     <a className="button" href="/news">News</a>
                     {user.email
                     ?(<div id="user">
