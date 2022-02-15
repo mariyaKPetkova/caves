@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:5000'
+const baseUrl = 'https://caves-in-bg.herokuapp.com'
 export const getAll = async () => {
     const response = await fetch(`${baseUrl}/data/news`) //  /catalog
     //console.log(response)

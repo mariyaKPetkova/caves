@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:5000'
+const baseUrl = 'https://caves-in-bg.herokuapp.com'
 
 export const login = async (email, password) => {
     const res = await fetch(`${baseUrl}/user/login`, {

@@ -1,4 +1,5 @@
-const baseUrl = 'http://localhost:5000' //  /catalog 
+const baseUrl = 'https://caves-in-bg.herokuapp.com'
+//'http://localhost:5000' //  /catalog 
 //http://localhost:3030
 //'https://softuni-service.herokuapp.com/data'
 
